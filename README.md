@@ -2,6 +2,8 @@
 
 **TODO: Add description**
 
+Documentation [https://tondahack.github.io/elixir-magic-talk/](https://tondahack.github.io/elixir-magic-talk/)
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
