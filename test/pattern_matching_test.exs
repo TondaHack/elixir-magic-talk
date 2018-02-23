@@ -1,4 +1,4 @@
 defmodule PatternMatchingTest do
   use ExUnit.Case
-  doctest ElixirMagicTalk.PatternMatching
+  doctest PatternMatching
 end

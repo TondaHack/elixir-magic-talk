@@ -1,21 +1,33 @@
-defmodule ElixirMagicTalk.PipeOperator do
+defmodule PipeOperator do
   @doc """
     Simple pipe.
 
     ## Examples
-      iex> ElixirMagicTalk.PipeOperator.clean_string("Hello my,  darling  ")
+      iex> PipeOperator.process_str("Hello my,  darling  ")
       %{
         "text" => "Hello my darling",
         "length" => 16,
         "words" => 3
       }
   """
-  def clean_string(str) do
+  def process_str(str) do
+    str
+    |> clean_str()
+    |> add_meta()
+  end
+
+  @doc """
+    Simple pipe.
+
+    ## Examples
+      iex> PipeOperator.clean_str("Hello my,  darling  ")
+      "Hello my darling"
+  """
+  def clean_str(str) do
     str
     |> String.trim()
     |> String.replace(~r/  +/, " ")
     |> String.replace(",", "")
-    |> add_meta
   end
 
   defp add_meta(clean_str) do

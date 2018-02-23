@@ -1,9 +1,9 @@
-defmodule ElixirMagicTalk.PatternMatching do
+defmodule PatternMatching do
   @doc """
     Simple match.
 
     ## Examples
-      iex> ElixirMagicTalk.PatternMatching.simple_match()
+      iex> PatternMatching.simple_match()
       1
   """
   def simple_match() do
@@ -15,7 +15,7 @@ defmodule ElixirMagicTalk.PatternMatching do
     tuple match.
 
     ## Examples
-      iex> ElixirMagicTalk.PatternMatching.tuple_pattern({"John", "Doe", 30})
+      iex> PatternMatching.tuple_pattern({"John", "Doe", 30})
       "John Doe is 30 years old."
   """
   def tuple_pattern(person) do
@@ -25,13 +25,29 @@ defmodule ElixirMagicTalk.PatternMatching do
   end
 
   @doc """
-    tuple match.
+    Tail Call Optimisation.
 
     ## Examples
-      iex> ElixirMagicTalk.PatternMatching.resolve_response({:ok, %{"name"=> "John"}})
+      iex> PatternMatching.sum([1, 2, 3], 0)
+      6
+      iex> PatternMatching.sum([], 0)
+      0
+
+  """
+  def sum([], acc), do: acc
+
+  def sum([head | tail], acc) do
+    sum(tail, head + acc)
+  end
+
+  @doc """
+    Tuple match.
+
+    ## Examples
+      iex> PatternMatching.resolve_response({:ok, %{"name"=> "John"}})
       %{"name"=> "John"}
 
-      iex> ElixirMagicTalk.PatternMatching.resolve_response({:error, "Bad Request"})
+      iex> PatternMatching.resolve_response({:error, "Bad Request"})
       ** (RuntimeError) Bad Request
   """
   def resolve_response({:ok, result}) do
@@ -46,7 +62,7 @@ defmodule ElixirMagicTalk.PatternMatching do
     Pick and transform data.
 
     ## Examples
-      iex> ElixirMagicTalk.PatternMatching.keywords_to_map([name: John, size: 4, test: :test])
+      iex> PatternMatching.keywords_to_map([name: John, size: 4, test: :test])
       %{"name" => John, "size" => 4}
 
   """
@@ -66,7 +82,7 @@ defmodule ElixirMagicTalk.PatternMatching do
     state
   end
 
-  def keywords_to_map([_| rest], state) do
+  def keywords_to_map([_ | rest], state) do
     keywords_to_map(rest, state)
   end
 end
