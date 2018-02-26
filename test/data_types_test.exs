@@ -11,6 +11,12 @@ defmodule ListTest do
     assert [1 | simple_list] == [1, 2, 3]
   end
 
+  test "Add value (slow)" do
+    simple_list = [1, 2]
+
+    assert simple_list ++ [3] == [1, 2, 3]
+  end
+
   test "Head | Tail" do
     [head | tail] = [1, 2, 3]
 

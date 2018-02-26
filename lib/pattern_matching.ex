@@ -18,9 +18,7 @@ defmodule PatternMatching do
       iex> PatternMatching.tuple_pattern({"John", "Doe", 30})
       "John Doe is 30 years old."
   """
-  def tuple_pattern(person) do
-    {firstname, lastname, age} = person
-
+  def tuple_pattern({firstname, lastname, age}) do
     "#{firstname} #{lastname} is #{age} years old."
   end
 
