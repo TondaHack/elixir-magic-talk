@@ -21,6 +21,13 @@ mix deps.get
 iex -S mix
 ```
 
+### Run module/function
+
+```
+iex> PatternMatching.sum([1, 2, 3], 0)
+6
+```
+
 ## Tests
 
 ```

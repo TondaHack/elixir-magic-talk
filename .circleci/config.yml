@@ -10,5 +10,6 @@ jobs:
       - run: mix local.hex --force
       - run: mix deps.get
       - run: mix test
+      - run: mix docs
       - run:
           command: bash .circleci/deploy-ghpages.sh
