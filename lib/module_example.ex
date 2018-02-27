@@ -1,4 +1,3 @@
-
 defmodule ElixirModule do
   @moduledoc """
     Elixir module example
@@ -15,5 +14,3 @@ defmodule ElixirModule do
     "private function"
   end
 end
-
-

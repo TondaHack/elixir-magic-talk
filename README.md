@@ -1,23 +1,30 @@
-# ElixirMagicTalk
+# ElixirMagicTalk [![CircleCI](https://circleci.com/gh/TondaHack/elixir-magic-talk.svg?style=svg)](https://circleci.com/gh/TondaHack/elixir-magic-talk)
 
-**TODO: Add description**
+## Documentation
 
-Documentation [https://tondahack.github.io/elixir-magic-talk/](https://tondahack.github.io/elixir-magic-talk/)
+This repository contains examples for public talk about introduction to Elixir language. Presentation for this talk is [here](https://docs.google.com/presentation/d/1Y6jUcEhbtZi49vcbxSbe9aAs9n6ZWGsusHKDiJHm0cc/edit?usp=sharing).
+
+
+## Generated documentation
+[https://tondahack.github.io/elixir-magic-talk/](https://tondahack.github.io/elixir-magic-talk/)
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `elixir_magic_talk` to your list of dependencies in `mix.exs`:
+Requred Elixir ~> 1.6 ([Installing Elixir](https://elixir-lang.org/install.html))
 
-```elixir
-def deps do
-  [
-    {:elixir_magic_talk, "~> 0.1.0"}
-  ]
-end
+### Install dependencies
+```
+mix deps.get
+```
+### Open interactive shell
+```
+iex -S mix
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/elixir_magic_talk](https://hexdocs.pm/elixir_magic_talk).
+## Tests
+
+```
+mix test
+```
+
 
