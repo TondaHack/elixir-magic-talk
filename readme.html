@@ -8,7 +8,7 @@
     <title>ElixirMagicTalk – Elixir Magic Talk v0.1.0</title>
     <link rel="stylesheet" href="dist/app-480ffdc169.css" />
     
-    <script src="dist/sidebar_items-b7736f41f2.js"></script>
+    <script src="dist/sidebar_items-7fa2da35dd.js"></script>
     
     
     
@@ -68,23 +68,50 @@
     <div id="content" class="content-inner">
 
 
-<h1>ElixirMagicTalk</h1>
-<p><strong>TODO: Add description</strong></p>
+<h1>ElixirMagicTalk <a href="https://circleci.com/gh/TondaHack/elixir-magic-talk"><img src="https://circleci.com/gh/TondaHack/elixir-magic-talk.svg?style=svg" alt="CircleCI"/></a></h1>
+<h2 id="documentation" class="section-heading">
+  <a href="#documentation" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Documentation
+</h2>
+
+<p>This repository contains examples for public talk about introduction to Elixir language. Presentation for this talk is <a href="https://docs.google.com/presentation/d/1Y6jUcEhbtZi49vcbxSbe9aAs9n6ZWGsusHKDiJHm0cc/edit?usp=sharing">here</a>.</p>
+<h2 id="generated-documentation" class="section-heading">
+  <a href="#generated-documentation" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Generated documentation
+</h2>
+
+<p><a href="https://tondahack.github.io/elixir-magic-talk/">https://tondahack.github.io/elixir-magic-talk/</a></p>
 <h2 id="installation" class="section-heading">
   <a href="#installation" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Installation
 </h2>
 
-<p>If <a href="https://hex.pm/docs/publish">available in Hex</a>, the package can be installed
-by adding <code class="inline">elixir_magic_talk</code> to your list of dependencies in <code class="inline">mix.exs</code>:</p>
-<pre><code class="elixir">def deps do
-  [
-    {:elixir_magic_talk, &quot;~&gt; 0.1.0&quot;}
-  ]
-end</code></pre>
-<p>Documentation can be generated with <a href="https://github.com/elixir-lang/ex_doc">ExDoc</a>
-and published on <a href="https://hexdocs.pm">HexDocs</a>. Once published, the docs can
-be found at <a href="https://hexdocs.pm/elixir_magic_talk">https://hexdocs.pm/elixir_magic_talk</a>.</p>
+<p>Requred Elixir ~&gt; 1.6 (<a href="https://elixir-lang.org/install.html">Installing Elixir</a>)</p>
+<h3 id="install-dependencies" class="section-heading">
+  <a href="#install-dependencies" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Install dependencies
+</h3>
+
+<pre><code class="elixir">mix deps.get</code></pre>
+<h3 id="open-interactive-shell" class="section-heading">
+  <a href="#open-interactive-shell" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Open interactive shell
+</h3>
+
+<pre><code class="elixir">iex -S mix</code></pre>
+<h3 id="run-module-function" class="section-heading">
+  <a href="#run-module-function" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Run module/function
+</h3>
+
+<pre><code class="iex elixir">iex&gt; PatternMatching.sum([1, 2, 3], 0)
+6</code></pre>
+<h2 id="tests" class="section-heading">
+  <a href="#tests" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Tests
+</h2>
+
+<pre><code class="elixir">mix test</code></pre>
 
       <footer class="footer">
         <p>

@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.3">
-    <title>ElixirMagicTalk.PatternMatching – Elixir Magic Talk v0.1.0</title>
+    <title>PatternMatching – Elixir Magic Talk v0.1.0</title>
     <link rel="stylesheet" href="dist/app-480ffdc169.css" />
     
-    <script src="dist/sidebar_items-b7736f41f2.js"></script>
+    <script src="dist/sidebar_items-7fa2da35dd.js"></script>
     
     
     
@@ -70,7 +70,7 @@
 
       <h1>
         <small class="visible-xs">Elixir Magic Talk v0.1.0</small>
-        ElixirMagicTalk.PatternMatching
+        PatternMatching
         
           <a href="https://github.com/USER/PROJECT/blob/master/lib/pattern_matching.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
@@ -117,7 +117,7 @@
     <a href="#resolve_response/1">resolve_response(arg)</a>
   </div>
   
-    <div class="summary-synopsis"><p>tuple match</p>
+    <div class="summary-synopsis"><p>Tuple match</p>
 </div>
   
 </div>
@@ -132,7 +132,16 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#tuple_pattern/1">tuple_pattern(person)</a>
+    <a href="#sum/2">sum(list, acc)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Tail Call Optimisation</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#tuple_pattern/1">tuple_pattern(arg)</a>
   </div>
   
     <div class="summary-synopsis"><p>tuple match</p>
@@ -169,7 +178,7 @@
     </a>
     <span class="signature">keywords_to_map(data)</span>
     
-      <a href="https://github.com/USER/PROJECT/blob/master/lib/pattern_matching.ex#L53" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/USER/PROJECT/blob/master/lib/pattern_matching.ex#L67" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -180,7 +189,7 @@
   <section class="docstring">
     <p>  Pick and transform data.</p>
 <p>  ## Examples</p>
-<pre><code class="iex elixir">iex&gt; ElixirMagicTalk.PatternMatching.keywords_to_map([name: John, size: 4, test: :test])
+<pre><code class="iex elixir">iex&gt; PatternMatching.keywords_to_map([name: John, size: 4, test: :test])
 %{&quot;name&quot; =&gt; John, &quot;size&quot; =&gt; 4}</code></pre>
 
   </section>
@@ -195,7 +204,7 @@
     </a>
     <span class="signature">keywords_to_map(list, state)</span>
     
-      <a href="https://github.com/USER/PROJECT/blob/master/lib/pattern_matching.ex#L69" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/USER/PROJECT/blob/master/lib/pattern_matching.ex#L83" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -217,7 +226,7 @@
     </a>
     <span class="signature">resolve_response(arg)</span>
     
-      <a href="https://github.com/USER/PROJECT/blob/master/lib/pattern_matching.ex#L41" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/USER/PROJECT/blob/master/lib/pattern_matching.ex#L55" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -226,12 +235,12 @@
     
   </div>
   <section class="docstring">
-    <p>  tuple match.</p>
+    <p>  Tuple match.</p>
 <p>  ## Examples</p>
-<pre><code class="iex elixir">iex&gt; ElixirMagicTalk.PatternMatching.resolve_response({:ok, %{&quot;name&quot;=&gt; &quot;John&quot;}})
+<pre><code class="iex elixir">iex&gt; PatternMatching.resolve_response({:ok, %{&quot;name&quot;=&gt; &quot;John&quot;}})
 %{&quot;name&quot;=&gt; &quot;John&quot;}
 
-iex&gt; ElixirMagicTalk.PatternMatching.resolve_response({:error, &quot;Bad Request&quot;})
+iex&gt; PatternMatching.resolve_response({:error, &quot;Bad Request&quot;})
 ** (RuntimeError) Bad Request</code></pre>
 
   </section>
@@ -257,8 +266,36 @@ iex&gt; ElixirMagicTalk.PatternMatching.resolve_response({:error, &quot;Bad Requ
   <section class="docstring">
     <p>  Simple match.</p>
 <p>  ## Examples</p>
-<pre><code class="iex elixir">iex&gt; ElixirMagicTalk.PatternMatching.simple_match()
+<pre><code class="iex elixir">iex&gt; PatternMatching.simple_match()
 1</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="sum/2">
+  
+  
+  <div class="detail-header">
+    <a href="#sum/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">sum(list, acc)</span>
+    
+      <a href="https://github.com/USER/PROJECT/blob/master/lib/pattern_matching.ex#L37" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>  Tail Call Optimisation.</p>
+<p>  ## Examples</p>
+<pre><code class="iex elixir">iex&gt; PatternMatching.sum([1, 2, 3], 0)
+6
+iex&gt; PatternMatching.sum([], 0)
+0</code></pre>
 
   </section>
 </div>
@@ -270,7 +307,7 @@ iex&gt; ElixirMagicTalk.PatternMatching.resolve_response({:error, &quot;Bad Requ
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">tuple_pattern(person)</span>
+    <span class="signature">tuple_pattern(arg)</span>
     
       <a href="https://github.com/USER/PROJECT/blob/master/lib/pattern_matching.ex#L21" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
@@ -283,7 +320,7 @@ iex&gt; ElixirMagicTalk.PatternMatching.resolve_response({:error, &quot;Bad Requ
   <section class="docstring">
     <p>  tuple match.</p>
 <p>  ## Examples</p>
-<pre><code class="iex elixir">iex&gt; ElixirMagicTalk.PatternMatching.tuple_pattern({&quot;John&quot;, &quot;Doe&quot;, 30})
+<pre><code class="iex elixir">iex&gt; PatternMatching.tuple_pattern({&quot;John&quot;, &quot;Doe&quot;, 30})
 &quot;John Doe is 30 years old.&quot;</code></pre>
 
   </section>

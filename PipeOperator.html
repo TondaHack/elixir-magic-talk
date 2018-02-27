@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.3">
-    <title>ElixirMagicTalk.PipeOperator – Elixir Magic Talk v0.1.0</title>
+    <title>PipeOperator – Elixir Magic Talk v0.1.0</title>
     <link rel="stylesheet" href="dist/app-480ffdc169.css" />
     
-    <script src="dist/sidebar_items-b7736f41f2.js"></script>
+    <script src="dist/sidebar_items-7fa2da35dd.js"></script>
     
     
     
@@ -70,7 +70,7 @@
 
       <h1>
         <small class="visible-xs">Elixir Magic Talk v0.1.0</small>
-        ElixirMagicTalk.PipeOperator
+        PipeOperator
         
           <a href="https://github.com/USER/PROJECT/blob/master/lib/pipe_operator.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
@@ -99,7 +99,16 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#clean_string/1">clean_string(str)</a>
+    <a href="#clean_str/1">clean_str(str)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Simple pipe</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#process_str/1">process_str(str)</a>
   </div>
   
     <div class="summary-synopsis"><p>Simple pipe</p>
@@ -126,15 +135,41 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="clean_string/1">
+          <div class="detail" id="clean_str/1">
   
   
   <div class="detail-header">
-    <a href="#clean_string/1" class="detail-link" title="Link to this function">
+    <a href="#clean_str/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">clean_string(str)</span>
+    <span class="signature">clean_str(str)</span>
+    
+      <a href="https://github.com/USER/PROJECT/blob/master/lib/pipe_operator.ex#L26" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>  Simple pipe.</p>
+<p>  ## Examples</p>
+<pre><code class="iex elixir">iex&gt; PipeOperator.clean_str(&quot;Hello my,  darling  &quot;)
+&quot;Hello my darling&quot;</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="process_str/1">
+  
+  
+  <div class="detail-header">
+    <a href="#process_str/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">process_str(str)</span>
     
       <a href="https://github.com/USER/PROJECT/blob/master/lib/pipe_operator.ex#L13" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
@@ -147,7 +182,7 @@
   <section class="docstring">
     <p>  Simple pipe.</p>
 <p>  ## Examples</p>
-<pre><code class="iex elixir">iex&gt; ElixirMagicTalk.PipeOperator.clean_string(&quot;Hello my,  darling  &quot;)
+<pre><code class="iex elixir">iex&gt; PipeOperator.process_str(&quot;Hello my,  darling  &quot;)
 %{
   &quot;text&quot; =&gt; &quot;Hello my darling&quot;,
   &quot;length&quot; =&gt; 16,
