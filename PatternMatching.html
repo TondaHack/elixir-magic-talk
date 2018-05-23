@@ -8,7 +8,7 @@
     <title>PatternMatching – Elixir Magic Talk v0.1.0</title>
     <link rel="stylesheet" href="dist/app-480ffdc169.css" />
     
-    <script src="dist/sidebar_items-7fa2da35dd.js"></script>
+    <script src="dist/sidebar_items-5e52127756.js"></script>
     
     
     
@@ -102,7 +102,7 @@
     <a href="#keywords_to_map/1">keywords_to_map(data)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Pick and transform data</p>
+    <div class="summary-synopsis"><p>Transform Keyword List to Map</p>
 </div>
   
 </div>
@@ -110,6 +110,15 @@
   <div class="summary-signature">
     <a href="#keywords_to_map/2">keywords_to_map(list, state)</a>
   </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#parse_number/1">parse_number(num)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Parse and round numbers. Handle other datatypes</p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -187,7 +196,7 @@
     
   </div>
   <section class="docstring">
-    <p>  Pick and transform data.</p>
+    <p>  Transform Keyword List to Map.</p>
 <p>  ## Examples</p>
 <pre><code class="iex elixir">iex&gt; PatternMatching.keywords_to_map([name: John, size: 4, test: :test])
 %{&quot;name&quot; =&gt; John, &quot;size&quot; =&gt; 4}</code></pre>
@@ -214,6 +223,36 @@
   </div>
   <section class="docstring">
     
+  </section>
+</div>
+<div class="detail" id="parse_number/1">
+  
+  
+  <div class="detail-header">
+    <a href="#parse_number/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">parse_number(num)</span>
+    
+      <a href="https://github.com/USER/PROJECT/blob/master/lib/pattern_matching.ex#L107" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p> Parse and round numbers. Handle other datatypes.</p>
+<p> ## Examples
+   iex&gt; PatternMatching.parse_number(6)
+   6
+   iex&gt; PatternMatching.parse_number(6.66)
+   7
+   iex&gt; PatternMatching.parse_number(:ok)
+   0</p>
+
   </section>
 </div>
 <div class="detail" id="resolve_response/1">
