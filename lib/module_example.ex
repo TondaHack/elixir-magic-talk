@@ -14,4 +14,3 @@ defmodule ElixirModule do
     "private function"
   end
 end
-

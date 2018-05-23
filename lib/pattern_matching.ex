@@ -57,7 +57,7 @@ defmodule PatternMatching do
   end
 
   @doc """
-    Pick and transform data.
+    Transform Keyword List to Map.
 
     ## Examples
       iex> PatternMatching.keywords_to_map([name: John, size: 4, test: :test])
@@ -83,4 +83,26 @@ defmodule PatternMatching do
   def keywords_to_map([_ | rest], state) do
     keywords_to_map(rest, state)
   end
+
+  @doc """
+   Parse and round numbers. Handle other datatypes.
+
+   ## Examples
+     iex> PatternMatching.parse_number(6)
+     6
+     iex> PatternMatching.parse_number(6.66)
+     7
+     iex> PatternMatching.parse_number(:ok)
+     0
+
+  """
+  def parse_number(num) when is_float(num) do
+    round(num)
+  end
+
+  def parse_number(num) when is_integer(num) do
+    num
+  end
+
+  def parse_number(_num), do: 0
 end
