@@ -4,7 +4,7 @@ defmodule ElixirModule do
   """
 
   @doc """
-    Run method
+    Run function
   """
   def run() do
     "Public function uses #{private_function()}!"
@@ -14,3 +14,4 @@ defmodule ElixirModule do
     "private function"
   end
 end
+
