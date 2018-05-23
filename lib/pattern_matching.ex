@@ -60,28 +60,28 @@ defmodule PatternMatching do
     Transform Keyword List to Map.
 
     ## Examples
-      iex> PatternMatching.keywords_to_map([name: John, size: 4, test: :test])
+      iex> PatternMatching.keyword_to_map([name: John, size: 4, test: :test])
       %{"name" => John, "size" => 4}
 
   """
-  def keywords_to_map(data) do
-    keywords_to_map(data, %{})
+  def keyword_to_map(data) do
+    keyword_to_map(data, %{})
   end
 
-  def keywords_to_map([{:name, name} | rest], state) do
-    keywords_to_map(rest, Map.put(state, "name", name))
+  def keyword_to_map([{:name, name} | rest], state) do
+    keyword_to_map(rest, Map.put(state, "name", name))
   end
 
-  def keywords_to_map([{:size, size} | rest], state) do
-    keywords_to_map(rest, Map.put(state, "size", size))
+  def keyword_to_map([{:size, size} | rest], state) do
+    keyword_to_map(rest, Map.put(state, "size", size))
   end
 
-  def keywords_to_map([], state) do
+  def keyword_to_map([], state) do
     state
   end
 
-  def keywords_to_map([_ | rest], state) do
-    keywords_to_map(rest, state)
+  def keyword_to_map([_ | rest], state) do
+    keyword_to_map(rest, state)
   end
 
   @doc """
